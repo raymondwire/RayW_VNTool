@@ -53,7 +53,7 @@ namespace DIALOGUE
                 if (line.hasCommands)
                     yield return Line_RunCommands(line);
 
-            
+
             }
         }
 

@@ -10,7 +10,6 @@ namespace DIALOGUE
         public DialogueContainer dialogueContainer = new DialogueContainer();
         private ConversationManager conversationManager;
         private TextBuild build;
-        private AutoReader autoReader;
 
         public static DialogueSystem instance;
 
@@ -37,9 +36,6 @@ namespace DIALOGUE
 
             build = new TextBuild(dialogueContainer.dialogueTxt);
             conversationManager = new ConversationManager(build);
-
-            if (TryGetComponent(out autoReader))
-                autoReader.Initialize(conversationManager);
         }
 
         public void OnUserPrompt_Next()
@@ -48,7 +44,7 @@ namespace DIALOGUE
         }
         public void ShowSpeakerName(string speakerName = "") => dialogueContainer.nameContainer.Show(speakerName);
         public void HideSpeakerName() => dialogueContainer.nameContainer.Hide();
-      public void Say(string speaker, string dialogue)
+        public void Say(string speaker, string dialogue)
         {
             List<string> conversation = new List<string>() { $"{speaker} \"{dialogue}\"" };
             Say(conversation);

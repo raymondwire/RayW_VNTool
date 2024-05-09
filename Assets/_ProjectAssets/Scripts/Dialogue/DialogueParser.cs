@@ -26,7 +26,7 @@ namespace DIALOGUE
             int dialogueEnd = -1;
             bool isEscaped = false;
 
-            for(int i =0; i < rawLine.Length; i++)
+            for (int i = 0; i < rawLine.Length; i++)
             {
                 char current = rawLine[i];
                 if (current == '\\')
@@ -44,11 +44,11 @@ namespace DIALOGUE
             Regex commandRegex = new Regex(commandRegexPattern);
             Match match = commandRegex.Match(rawLine);
             int commandStart = -1;
-            if(match.Success)
+            if (match.Success)
             {
                 commandStart = match.Index;
 
-                if(dialogueStart == -1 && dialogueEnd == -1)
+                if (dialogueStart == -1 && dialogueEnd == -1)
                     return ("", "", rawLine.Trim());
             }
 

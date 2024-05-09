@@ -1,0 +1,15 @@
+Creator "Hello, welcome to the VN tool."
+
+You "VN tool?"
+
+Creator "Inside the VN tool is a simple dialogue system and save/load capabilities."
+
+Creator "Everything is still a work in progress, this tool mainly caters to how I want my VN games to be."
+
+Tutorial "You can find this text file inside the gameData folder and alter your text to your liking."
+
+Tutorial  "The dialogue system takes from text files and reads them into the system."
+
+Creator "I have plans to code in a UI menu template, SFX System, and small animation capabilities for the characters."
+
+Creator "Enjoy the tool and hope this helps making a visual novel in Unity less hard."

@@ -10,6 +10,7 @@ namespace DIALOGUE
         public DialogueContainer dialogueContainer = new DialogueContainer();
         private ConversationManager conversationManager;
         private TextBuild build;
+        private AutoReader autoReader;
 
         public static DialogueSystem instance;
 
@@ -36,6 +37,9 @@ namespace DIALOGUE
 
             build = new TextBuild(dialogueContainer.dialogueTxt);
             conversationManager = new ConversationManager(build);
+
+            if (TryGetComponent(out autoReader))
+                autoReader.Initialize(conversationManager);
         }
 
         public void OnUserPrompt_Next()

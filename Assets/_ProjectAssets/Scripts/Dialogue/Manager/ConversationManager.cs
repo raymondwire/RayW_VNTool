@@ -11,7 +11,7 @@ namespace DIALOGUE
         private Coroutine process = null;
         public bool isRunning => process != null;
 
-        private TextBuild build = null;
+        public TextBuild build = null;
         private bool userPrompt = false;
         public ConversationManager(TextBuild build)
         {
